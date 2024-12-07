@@ -3,14 +3,14 @@
 user_num = input('Введите номер единицы массы (1-5): ')
 user_m = input('Введите массу тела: ')
 
-while type(user_num) != int:
+while type(user_num) != int: #Обработка исключений
     try:
         user_num = int(user_num)
     except ValueError:
         print('Неправильно ввели!')
         user_num = input('Введите номер единицы массы (1-5): ')
 
-while type(user_m) != float:
+while type(user_m) != float: #Обработка исключений
     try:
         user_m = float(user_m)
     except ValueError:
