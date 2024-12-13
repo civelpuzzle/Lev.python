@@ -20,7 +20,7 @@ while type(b) != int: #обработка исключений
         b = input('Введите второе число: ')
 
 while a <= b:
-    sub = sub + a * b
+    sub += a * b
     a += 1
 
 print('Произведение целых чисел: ', sub)
