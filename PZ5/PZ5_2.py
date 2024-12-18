@@ -26,6 +26,6 @@ def AddRightDigit(a, b):
 
 K = proof(K)
 K = AddRightDigit(D, K)
-print(K)
+print('Число К с D1: ', K)
 K = AddRightDigit(D, K)
-print(K)
+print('Число К с D1 и D2', K)
