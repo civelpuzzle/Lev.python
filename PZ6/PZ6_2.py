@@ -22,17 +22,6 @@ for i in range(1, len(user_list) - 1):
     if user_list[i] > user_list[i - 1] and user_list[i] > user_list[i + 1]:
         loc_max.append(user_list[i])
 
-print(user_list)
-print(loc_max)
-print(min(loc_max))
-
-"""for i in range(1, N - 1):
-    if user_list[i] > user_list[i - 1] and user_list[i] > user_list[i + 1]:
-        loc_max = []
-        loc_max.append(user_list[i])
-
-min_loc_max = min(loc_max)
-
-print(user_list)
-print(loc_max)
-print('Минимальный локальный максимум: ', min_loc_max)"""
+#print(user_list)
+#print(loc_max)
+print('Минимальный локальный максимум: ', min(loc_max))
