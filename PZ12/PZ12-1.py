@@ -8,10 +8,10 @@ import random
 pos = [random.randint(-10, 10) for i in range(random.randint(6, 12))]
 print(f'Изначальная последовательность: {pos}')
 
-pos1 = [i for i in pos if i % 2 == 0]
+pos1 = [i for i in pos if not i % 2]
 print(f'Последовательность из четных чисел: {pos1}')
 
-pos2 = [i for i in pos if i % 2 != 0]
+pos2 = [i for i in pos if i % 2]
 print(f'Последовательность из остальных: {pos2}')
 
 s1 = sum(pos1) / len(pos1)
