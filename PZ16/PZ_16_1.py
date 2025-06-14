@@ -16,23 +16,27 @@ class Matrix:
         self.matr = [[random.randint(-5, 5) for i in range(self.stolb)] for i in range(self.strok)]
 
     def Printtt(self):
+        print('Матрица:')
         for i in self.matr:
             print(i)
         print(' ')
 
     def Add(self, other):
         self.sum = [[self.matr[i][y] + other.matr[i][y] for y in range(len(self.matr[0]))] for i in range(len(self.matr))]
+        print('Сумма:')
         for i in self.sum:
             print(i)
         print(' ')
 
     def Sub(self, other):
+        print('Разность:')
         self.sub = [[self.matr[i][y] - other.matr[i][y] for y in range(len(self.matr[0]))] for i in range(len(self.matr))]
         for i in self.sub:
             print(i)
         print(' ')
 
     def Mult(self, other):
+        print('Произведение:')
         self.mul = [[self.matr[i][y] * other.matr[i][y] for y in range(len(self.matr[0]))] for i in
                     range(len(self.matr))]
         for i in self.mul:
