@@ -1,3 +1,7 @@
+#Приложение АПТЕКА для автоматизации работы аптечных пунктов. Таблица
+#Лекарственные Средства должна содержать следующую информацию: Код, Название
+#препарата, Применение, Количество, Цена, Страна-производитель.
+
 import sqlite3 as sq
 
 with sq.connect('apteka.db') as con:
@@ -36,3 +40,15 @@ with sq.connect('apteka.db') as con:
     print(cur.fetchall())
 
     cur.execute("UPDATE lek_sr SET price = 1000 WHERE country_p = 'Болгария'")
+    cur.execute("UPDATE lek_sr SET kolvo = 50 WHERE price > 1000")
+    cur.execute("UPDATE lek_sr SET country_p = 'Россия' WHERE to_use = 'Таблетка'")
+
+    #cur.execute("SELECT * FROM lek_sr")
+    #print(cur.fetchall())
+
+    cur.execute("DELETE FROM lek_sr WHERE kolvo > 60")
+    cur.execute("DELETE FROM lek_sr WHERE lek_id = 6")
+    cur.execute("DELETE FROM lek_sr WHERE price = 1000")
+
+    #cur.execute("SELECT * FROM lek_sr")
+    #print(cur.fetchall())
